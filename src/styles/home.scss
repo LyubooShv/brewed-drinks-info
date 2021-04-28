@@ -1,0 +1,93 @@
+html {
+  box-sizing: border-box;
+  background-color: rgb(40, 110, 110);
+}
+body,
+#root {
+  height: 100vh;
+  margin: 0;
+}
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: 5rem 1fr 7rem;
+  grid-template-columns: 1fr;
+  height: 100%;
+}
+.homeImg {
+  display: flex;
+  justify-content: space-around;
+  padding: 35px 26% 5% 26%;
+}
+.caffeeImg {
+  width: 300px;
+  height: 429px;
+  border-radius: 8px;
+}
+.teaImg {
+  width: 300px;
+  height: 429px;
+  border-radius: 8px;
+}
+header {
+  display: flex;
+  justify-content: center;
+  padding-top: 1%;
+  font-family: "Kalam", cursive;
+  font-size: 40px;
+  color: rgb(22, 22, 22);
+}
+footer {
+  grid-area: footer;
+  background-color: #0d241b;
+  color: #dbc596;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Kalam", cursive;
+  font-size: 30px;
+  flex-direction: column;
+}
+.pCaffee,
+.pTea {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.pCaffee p,
+.pTea p {
+  display: flex;
+  justify-content: center;
+  font-family: "Kalam", cursive;
+  font-size: 20px;
+  color: rgb(22, 22, 22);
+  margin-top: 5px;
+}
+.pCaffee:hover,
+.pTea:hover {
+  opacity: 0.4;
+  padding-top: 2px;
+}
+.mediaImg:hover {
+  opacity: 0.4;
+  padding-top: 1px;
+}
+
+.media {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding-top: 33px;
+}
+.copyRight {
+  font-size: 10px;
+  background-color: #091812;
+  padding-top: 5px;
+  margin-top: 1.7%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}

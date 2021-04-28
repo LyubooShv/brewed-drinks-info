@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import "./App.scss";
+import Home from "./components/Home";
+import {
+  TiSocialFacebookCircular,
+  TiSocialInstagramCircular,
+  TiSocialTwitterCircular,
+  TiSocialGooglePlusCircular,
+  TiLocationOutline,
+} from "react-icons/ti";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="grid-container">
+      <header>Brewed Drinks Info</header>
+      <main>
+        <Home />
+      </main>
+      <footer>
+        <div className="media">
+          <TiSocialFacebookCircular className="mediaImg" />
+          <TiSocialInstagramCircular className="mediaImg" />
+          <TiSocialTwitterCircular className="mediaImg" />
+          <TiSocialGooglePlusCircular className="mediaImg" />
+          <TiLocationOutline className="mediaImg" />
+        </div>
+        <div className="copyRight">Copyright © LybooShv 2021 </div>
+      </footer>
     </div>
   );
 }
