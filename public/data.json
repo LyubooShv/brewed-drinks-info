@@ -1,0 +1,171 @@
+{
+    "coffees":[{
+      "name":"Espresso",
+      "type": "hot",
+      "img":"/pictures/espresso.jpg",
+      "caffeine":"212mg",
+      "calories":"2kcal",
+      "size":"one shot",
+      "id":"1"
+},
+{
+"name":"Latte",
+"type":"hot",
+"img":"/pictures/latte.jpg",
+"caffeine":"173mg",
+"calories":"135kcal",
+"size":"medium",
+"id":"2"
+},{
+    "name":"Cappuccino",
+    "type":"hot",
+    "img":"/pictures/cappuccino.jpg",
+    "caffeine":"173mg",
+    "calories":"148kcal",
+    "size":"medium",
+    "id":"3"
+},
+{
+    "name":"Mazagran",
+    "type":"cold",
+    "img":"/pictures/mazagran.jpg",
+    "caffeine":"150mg",
+    "calories":"137kcal",
+    "size":"12oz",
+    "id":"4"
+},
+{
+    "name":"Coconut Caramel",
+    "type":"cold",
+    "img":"/pictures/caramel.jpg",
+    "caffeine":"138mg",
+    "calories":"34kcal",
+    "size":"1 glass",
+    "id":"5"
+},
+{
+    "name":"Dulce de Leche",
+    "type":"cold",
+    "img":"/pictures/dulce.jpg",
+    "caffeine":"141mg",
+    "calories":"83kcal",
+    "size":"1 glass",
+    "id":"6"
+},
+{
+    "name":"Mocha",
+    "type":"hot",
+    "img":"/pictures/mocha.jpg",
+    "caffeine":"152mg",
+    "calories":"300kcal",
+    "size":"12oz",
+    "id":"7"
+},
+{
+    "name":"Macchiato",
+    "type":"hot",
+    "img":"/pictures/macchiato.jpg",
+    "caffeine":"85mg",
+    "calories":"10kcal",
+    "size":"2oz",
+    "id":"8"
+},
+{
+    "name":"Americano",
+    "type":"hot",
+    "img":"/pictures/americano.jpg",
+    "caffeine":"154mg",
+    "calories":"10kcal",
+    "size":"12oz",
+    "id":"9"
+},
+{
+    "name":"Frappe",
+    "type":"cold",
+    "img":"/pictures/frappe.jpg",
+    "caffeine":"100mg",
+    "calories":"97kcal",
+    "size":"12oz",
+    "id":"10"
+}],
+"teas":[{
+    "name":"Black",
+    "img":"/pictures/black.jpg",
+    "caffeine":"60-75mg",
+    "calories":"0kcal",
+    "size":"8oz",
+    "id":"11"
+},
+{
+"name":"White",
+"img":"/pictures/white.jpg",
+"caffeine":"10-15mg",
+"calories":"0kcal",
+"size":"8oz",
+"id":"12"
+},
+{
+  "name":"Green",
+  "img":"/pictures/green.jpg",
+  "caffeine":"15-30mg",
+  "calories":"0kcal",
+  "size":"8oz",
+  "id":"13"
+},
+{
+  "name":"Earl Grey",
+  "img":"/pictures/earl.jpg",
+  "caffeine":"47-70mg",
+  "calories":"0kcal",
+  "size":"8oz",
+  "id":"14"
+},
+{
+  "name":"Oolong",
+  "img":"/pictures/oolong.jpg",
+  "caffeine":"30-45mg",
+  "calories":"0kcal",
+  "size":"8oz",
+  "id":"15"
+},
+{
+  "name":"Herbal & Rooibos",
+  "img":"/pictures/herbs.jpg",
+  "caffeine":"0mg",
+  "calories":"0kcal",
+  "size":"8oz",
+  "id":"16"
+},
+{
+  "name":"Matcha",
+  "img":"/pictures/matcha.jpg",
+  "caffeine":"60-80mg",
+  "calories":"0kcal",
+  "size":"8oz",
+  "id":"17"
+},
+{
+  "name":"Mate",
+  "img":"/pictures/mate.jpg",
+  "caffeine":"70-85mg",
+  "calories":"0kcal",
+  "size":"8oz",
+  "id":"18"
+},
+{
+  "name":"Chai Latte",
+  "img":"/pictures/chai.jpg",
+  "caffeine":"70mg",
+  "calories":"190kcal",
+  "size":"12oz",
+  "id":"19"
+},
+{
+  "name":"Yellow",
+  "img":"/pictures/yellow.jpg",
+  "caffeine":"65mg",
+  "calories":"0kcal",
+  "size":"8oz",
+  "id":"20"
+}]
+}

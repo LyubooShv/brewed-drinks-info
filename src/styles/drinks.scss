@@ -1,0 +1,25 @@
+.drinksImg{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+.drinks{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-top: 1%;
+}
+.drinks p{
+   text-align: center;
+   padding-top: 1%;
+}
+.drinks li{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 2% 5% 0 5%;
+}
+.drinksImg:hover{
+opacity: 0.4;
+}
