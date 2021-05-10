@@ -22,6 +22,7 @@ function Nav() {
       <div className="navHeader">
       <p >Brewed Drinks Info</p>
       </div>
+      <div className="input"><input type="text" placeholder="Search" onChange={(event)=>this.setState({})}></input></div>
     </div>
   );
 }
