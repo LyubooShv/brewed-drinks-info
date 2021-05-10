@@ -7,18 +7,18 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    padding-top: 1%;
+    padding-top: 8px;
 }
-.drinks p{
+.nameP{
    text-align: center;
    padding-top: 1%;
 }
-.drinks li{
+.drinksLi{
     display: flex;
     justify-content: center;
     flex-direction: column;
     list-style-type: none;
-    padding: 2% 5% 0 5%;
+    padding: 2% 4% 0 4%;
 }
 .drinksImg:hover{
 opacity: 0.4;
