@@ -19,14 +19,17 @@ export default class CoffeePage extends Component {
   };
   render() {
     const { item } = this.state;
+    
     return (
       <div>
         <Nav />
         <div className="drinks">
           <Fade left cascade>
-            <ul className="drinks">
-              {this.props.coffees.map((item) => (
-                <li key={item.id} className="drinksLi">
+            {!this.props.drinks ? (<div>Loading...</div>) : (<ul className="drinks">
+              
+              {this.props.drinks.map((item) =>(item.drink==="coffee") && (
+                
+                <li key={item._id} className="drinksLi">
                   <img
                     src={item.img}
                     alt={item.name}
@@ -36,7 +39,8 @@ export default class CoffeePage extends Component {
                   <p className="nameP">{item.name}</p>
                 </li>
               ))}
-            </ul>
+            </ul>)}
+            
           </Fade>
           {item && (
             <Modal show={true} onRequestClose={this.closeModal}>

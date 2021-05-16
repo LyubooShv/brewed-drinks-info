@@ -1,191 +1,211 @@
 {
-    "coffees":[{
+    "drinks":[{
+      "_id":"1",
       "name":"Espresso",
+      "drink":"coffee",
       "type": "hot",
       "img":"/pictures/espresso.jpg",
       "caffeine":"212mg",
       "calories":"2kcal",
       "size":"one shot",
-      "id":"1",
       "info":"Espresso is a coffee-brewing method of Italian origin, in which a small amount of nearly boiling water is forced under 9–10 bars of pressure through finely-ground coffee beans. Espresso coffee can be made with a wide variety of coffee beans and roast degrees."
 },
 {
+"_id":"2",
 "name":"Latte",
+"drink":"coffee",
 "type":"hot",
 "img":"/pictures/latte.jpg",
 "caffeine":"173mg",
 "calories":"135kcal",
 "size":"medium",
-"id":"2",
 "info":"Caffe latte is a coffee drink made with espresso and steamed milk. The term comes from the Italian caffè e latte, caffelatte or caffellatte, which means 'coffee & milk'. In English, it is often shortened to just latte; either or both words sometimes have an accent on the final e."
 },{
+    "_id":"3",
     "name":"Cappuccino",
+    "drink":"coffee",
     "type":"hot",
     "img":"/pictures/cappuccino.jpg",
     "caffeine":"173mg",
     "calories":"148kcal",
     "size":"medium",
-    "id":"3",
     "info":"A cappuccino is an espresso-based coffee drink that originated in Italy, and is traditionally prepared with steamed milk foam. Variations of the drink involve the use of cream instead of milk, using non-dairy milks, and flavoring with cinnamon or chocolate powder." 
 },
 {
+    "_id":"4",
     "name":"Mazagran",
+    "drink":"coffee",
     "type":"cold",
     "img":"/pictures/mazagran.jpg",
     "caffeine":"150mg",
     "calories":"137kcal",
     "size":"12oz",
-    "id":"4",
     "info":"Mazagran is a cold, sweetened coffee drink that originated in Algeria. Portuguese versions may use espresso, lemon, mint and rum, and Austrian versions are served with an ice cube and include rum." 
 },
 {
+    "_id":"5",
     "name":"Coconut Caramel",
+    "drink":"coffee",
     "type":"cold",
     "img":"/pictures/caramel.jpg",
     "caffeine":"138mg",
     "calories":"34kcal",
     "size":"1 glass",
-    "id":"5",
     "info":"Keep prepared cold brew coffee in a pitcher or carafe in the refrigerator.Pour 1 cup (8-ounces) of coffee into a mug, cup or glass jar filled with ice. Stir in coconut milk and caramel syrup. Add sweetener, if desired. Serve immediately."
 },
 {
+    "_id":"6",
     "name":"Dulce de Leche",
+    "drink":"coffee",
     "type":"cold",
     "img":"/pictures/dulce.jpg",
     "caffeine":"141mg",
     "calories":"83kcal",
     "size":"1 glass",
-    "id":"6",
     "info":"So that’s literally what it is – espresso, hot water, a little cream and caramel syrup.I also love to use flavored creamers, and for this specific coffee, I use vanilla AND caramel creamer.That way it’s kind-of like dulce de leche, and their creamers are super rich and delightful.It’s not super sweet, and it’s just the right strength to get me going in the morning."
 },
 {
+    "_id":"7",
     "name":"Mocha",
+    "drink":"coffee",
     "type":"hot",
     "img":"/pictures/mocha.jpg",
     "caffeine":"152mg",
     "calories":"300kcal",
     "size":"12oz",
-    "id":"7",
     "info":"A caffè mocha, also called mocaccino, is a chocolate-flavoured variant of a caffè latte, commonly served in a glass. Other commonly used spellings are mochaccino and also mochachino. The name is derived from the city of Mocha, Yemen, which was one of the centers of early coffee trade."
 },
 {
+    "_id":"8",
     "name":"Macchiato",
+    "drink":"coffee",
     "type":"hot",
     "img":"/pictures/macchiato.jpg",
     "caffeine":"85mg",
     "calories":"10kcal",
     "size":"2oz",
-    "id":"8",
     "info":"Caffè macchiato, sometimes called espresso macchiato, is an espresso coffee drink with a small amount of milk, usually foamed. In Italian, macchiato means 'stained' or 'spotted' so the literal translation of caffè macchiato is 'stained' or 'marked coffee.'"
 },
-{
+{  
+    "_id":"9",
     "name":"Americano",
+    "drink":"coffee",
     "type":"hot",
     "img":"/pictures/americano.jpg",
     "caffeine":"154mg",
     "calories":"10kcal",
     "size":"12oz",
-    "id":"9",
     "info":"Caffè Americano is a type of coffee drink prepared by diluting an espresso with hot water, giving it a similar strength to, but different flavor from, traditionally brewed coffee. The strength of an Americano varies with the number of shots of espresso and the amount of water added."
 },
 {
+    "_id":"10",
     "name":"Frappe",
+    "drink":"coffee",
     "type":"cold",
     "img":"/pictures/frappe.jpg",
     "caffeine":"100mg",
     "calories":"97kcal",
     "size":"12oz",
-    "id":"10",
     "info":"A frappé coffee, Greek frappé, Nescafé frappé, or just frappé is a Greek iced coffee drink made from instant coffee, water, sugar, and milk. The word is often written frappe. The frappé was invented through experimentation by Dimitris Vakondios, a Nescafe representative, in 1957 in Thessaloniki."
-}],
-"teas":[{
+},
+{ 
+    "_id":"11",
     "name":"Black",
+    "drink":"tea",
     "img":"/pictures/black.jpg",
     "caffeine":"60-75mg",
     "calories":"0kcal",
     "size":"8oz",
-    "id":"11",
     "info":"Black tea is a type of tea that is more oxidized than oolong, yellow, white and green teas. Black tea is generally stronger in flavor than other teas. All five types are made from leaves of the shrub Camellia sinensis. "
 },
 {
+"_id":"12",
 "name":"White",
+"drink":"tea",
 "img":"/pictures/white.jpg",
 "caffeine":"10-15mg",
 "calories":"0kcal",
 "size":"8oz",
-"id":"12",
 "info":"White tea may refer to one of several styles of tea which generally feature young or minimally processed leaves of the Camellia sinensis plant.It is not rolled or oxidized, resulting in a flavor characterized as 'lighter' than most green or traditional black teas."
 },
 {
+  "_id":"13",
   "name":"Green",
+  "drink":"tea",
   "img":"/pictures/green.jpg",
   "caffeine":"15-30mg",
   "calories":"0kcal",
   "size":"8oz",
-  "id":"13",
   "info":"Green tea is a type of tea that is made from Camellia sinensis leaves and buds that have not undergone the same withering and oxidation process used to make oolong teas and black teas. Green tea originated in China, but its production and manufacture has spread to other countries in East Asia."
 },
 {
+  "_id":"14",
   "name":"Earl Grey",
+  "drink":"tea",
   "img":"/pictures/earl.jpg",
   "caffeine":"47-70mg",
   "calories":"0kcal",
   "size":"8oz",
-  "id":"14",
   "info":"Earl Grey tea is a tea blend which has been flavoured with the addition of oil of bergamot. The rind's fragrant oil is added to black tea to give Earl Grey its unique taste.[1] Traditionally, Earl Grey was made from black teas such as China keemun and therefore intended to be drunk without milk. However, tea companies have since begun to offer Earl Grey based upon stronger teas such as Ceylons which are better suited to the addition of milk or cream."
 },
 {
+  "_id":"15",
   "name":"Oolong",
+  "drink":"tea",
   "img":"/pictures/oolong.jpg",
   "caffeine":"30-45mg",
   "calories":"0kcal",
   "size":"8oz",
-  "id":"15",
   "info":"Oolong produced through a process including withering the plant under strong sun and oxidation before curling and twisting. Most oolong teas, especially those of fine quality, involve unique tea plant cultivars that are exclusively used for particular varieties."
 },
 {
+  "_id":"16",
   "name":"Herbal & Rooibos",
+  "drink":"tea",
   "img":"/pictures/herbs.jpg",
   "caffeine":"0mg",
   "calories":"0kcal",
   "size":"8oz",
-  "id":"16",
   "info":"Rooibos (pronounced ROY-boss) tea is a red herbal tea that comes from the fermented leaves of the Aspalathus linearis shrub, a plant native to South Africa. Many people enjoy it as an alternative to green or black tea. Unfermented green rooibos tea is also available."
 },
 {
+  "_id":"17",
   "name":"Matcha",
+  "drink":"tea",
   "img":"/pictures/matcha.jpg",
   "caffeine":"60-80mg",
   "calories":"0kcal",
   "size":"8oz",
-  "id":"17",
   "info":"Matcha is finely ground powder of specially grown and processed green tea leaves, traditionally consumed in East Asia. The green tea plants used for matcha are shade-grown for three to four weeks before harvest; the stems and veins are removed during processing."
 },
 {
+  "_id":"18",
   "name":"Mate",
+  "drink":"tea",
   "img":"/pictures/mate.jpg",
   "caffeine":"70-85mg",
   "calories":"0kcal",
   "size":"8oz",
-  "id":"18",
   "info":"Mate or maté also known as chimarrão or cimarrón, is a traditional South American caffeine-rich infused drink. It is made by soaking dried leaves of the holly species Ilex paraguariensis in hot water and is served with a metal straw in a container typically made from a calabash gourd."
 },
 {
+  "_id":"19",
   "name":"Chai Latte",
+  "drink":"tea",
   "img":"/pictures/chai.jpg",
   "caffeine":"70mg",
   "calories":"190kcal",
   "size":"12oz",
-  "id":"19",
   "info":"Chai Latte (Masala chai) is a tea beverage made by boiling black tea in milk and water with a mixture of aromatic herbs and spices. Originating in India the beverage has gained worldwide popularity, becoming a feature in many coffee and tea houses."
 },
 {
+  "_id":"20",
   "name":"Yellow",
+  "drink":"tea",
   "img":"/pictures/yellow.jpg",
   "caffeine":"65mg",
   "calories":"0kcal",
   "size":"8oz",
-  "id":"20",
   "info":"Yellow tea can refer to Chinese huángchá and Korean hwangcha.It is an increasingly rare and expensive variety of tea.The process for making yellow tea is similar to that of green but with an added step of encasing and steaming the tea. This allows the tea to oxidize at a slow rate for a brief period before the tea is heated fully to denature the oxidizing enzymes, producing a far more mellow taste than is found in most green teas, this also gives the leaves a slightly yellow coloring during the drying process.Yellow tea is often placed in the same category with green tea due to its light oxidation. One of the primary aims of making yellow tea is to remove the characteristic grassy smell of green tea."
 }]
 }
