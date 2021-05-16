@@ -12,24 +12,25 @@ import {
   TiSocialGooglePlusCircular,
   TiLocationOutline,
 } from "react-icons/ti";
+import data from "./data.json"
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      coffees: [],
-      teas: [],
+      drinks: data.drinks,
+      
     };
   }
-  componentDidMount() {
-    fetch("./data.json")
-      .then((res) => res.json())
-      .then((result) => {
-        this.setState({
-          coffees: result.coffees,
-          teas: result.teas,
-        });
-      });
-  }
+  // componentDidMount() {
+  //   fetch("http://localhost:5000/api/drinks")
+  //     .then((res) => res.json())
+  //     .then((result) => {
+  //       this.setState({
+  //         drinks: result.drinks,
+          
+  //       });
+  //     });
+  // }
   render() {
     return (
       <Router>
@@ -39,8 +40,8 @@ class App extends React.Component {
         <main>
           <Switch>
          <Route path="/" exact component={Home}></Route>
-          <Route path="/coffee" ><CoffeePage coffees={this.state.coffees} /></Route>
-         <Route path="/tea" > <TeaPage teas={this.state.teas}/></Route>
+          <Route path="/coffee" ><CoffeePage drinks={this.state.drinks} /></Route>
+         <Route path="/tea" > <TeaPage drinks={this.state.drinks}/></Route>
           </Switch>
         </main>
 
