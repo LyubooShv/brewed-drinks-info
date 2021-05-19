@@ -14,7 +14,6 @@ import {
 } from "react-icons/ti";
 import store from "./store";
 import { Provider } from "react-redux";
-import Like from "./components/like";
 class App extends React.Component {
   render() {
     return (
@@ -28,9 +27,6 @@ class App extends React.Component {
                 <Route path="/tea" component={TeaPage}></Route>
               </Switch>
             </main>
-            <div>
-              <Like />
-            </div>
             <footer>
               <div className="media">
                 <TiSocialFacebookCircular className="mediaImg" />

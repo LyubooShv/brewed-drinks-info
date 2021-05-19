@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { GiCoffeeBeans, GiTeapot } from "react-icons/gi";
 import { RiHomeSmileFill } from "react-icons/ri";
 import Filter from "./Filter";
+import Like from "./like";
 function Nav() {
   return (
     <div className="nav">
@@ -17,6 +18,9 @@ function Nav() {
           <Link to="/tea" className="path">
             <GiTeapot className="iconHome" />
           </Link>
+          <div>
+            <Like />
+          </div>
         </ul>
       </div>
       <div className="navHeader">
