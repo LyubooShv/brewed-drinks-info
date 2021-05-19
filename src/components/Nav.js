@@ -22,14 +22,7 @@ function Nav() {
       <div className="navHeader">
         <p>Brewed Drinks Info</p>
       </div>
-      <Filter/>
-      <div className="input">
-        <input
-          type="text"
-          placeholder="Search"
-          onChange={(event) => this.setState({})}
-        ></input>
-      </div>
+      <Filter />
     </div>
   );
 }

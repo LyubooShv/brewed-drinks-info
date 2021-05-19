@@ -4,17 +4,23 @@ import Fade from "react-reveal/Fade";
 import Zoom from "react-reveal/Zoom";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-export default class TeaPage extends Component {
+import { connect } from "react-redux";
+import { fetchDrinks } from "../actions/drinksActions";
+import { addToLiked } from "../actions/likeActions";
+class TeaPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
       item: null,
     };
   }
+  componentDidMount() {
+    this.props.fetchDrinks();
+  }
   openModal = (item) => {
     this.setState({ item });
   };
-  closeModal = () => {
+  closeModal = (item) => {
     this.setState({ item: null });
   };
   render() {
@@ -24,20 +30,26 @@ export default class TeaPage extends Component {
         <Nav />
         <div className="drinks">
           <Fade right cascade>
-            {!this.props.drinks ? (<div>Loading...</div>) : (<ul className="drinks">
-              {this.props.drinks.map((item) =>(item.drink==="tea") && (
-                <li key={item._id} className="drinksLi">
-                  <img
-                    src={item.img}
-                    alt={item.name}
-                    className="drinksImg"
-                    onClick={() => this.openModal(item)}
-                  />
-                  <p className="nameP">{item.name}</p>
-                </li>
-              ))}
-            </ul>)}
-            
+            {!this.props.drinks ? (
+              <div>Loading...</div>
+            ) : (
+              <ul className="drinks">
+                {this.props.drinks.map(
+                  (item) =>
+                    item.drink === "tea" && (
+                      <li key={item._id} className="drinksLi">
+                        <img
+                          src={item.img}
+                          alt={item.name}
+                          className="drinksImg"
+                          onClick={() => this.openModal(item)}
+                        />
+                        <p className="nameP">{item.name}</p>
+                      </li>
+                    )
+                )}
+              </ul>
+            )}
           </Fade>
           {item && (
             <Modal show={true} onRequestClose={this.closeModal}>
@@ -57,9 +69,8 @@ export default class TeaPage extends Component {
                   <div>
                     <ul>
                       <li>Size: {item.size}</li>
-                      <li>Type: {item.type}</li>
-                      <li>Caffeine: {item.caffeine}</li>
-                      <li>Calories: {item.calories}</li>
+                      <li>Caffeine: {item.caffeine}mg</li>
+                      <li>Calories: {item.calories}kcal</li>
                     </ul>
                   </div>
                 </Modal.Body>
@@ -70,6 +81,15 @@ export default class TeaPage extends Component {
                   >
                     Close
                   </Button>
+                  <Button
+                    variant="primary"
+                    onClick={() => {
+                      this.props.addToLiked(item);
+                      this.closeModal(item);
+                    }}
+                  >
+                    Like
+                  </Button>
                 </Modal.Footer>
               </Zoom>
             </Modal>
@@ -79,3 +99,7 @@ export default class TeaPage extends Component {
     );
   }
 }
+export default connect((state) => ({ drinks: state.drinks.filteredItems }), {
+  fetchDrinks,
+  addToLiked,
+})(TeaPage);
