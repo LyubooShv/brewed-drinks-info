@@ -19,10 +19,11 @@ const Drink = mongoose.model(
     name: String,
     drink: String,
     img: String,
-    caffeine: String,
-    calories: String,
+    caffeine: Number,
+    calories: Number,
     size: String,
-    info: String
+    info: String,
+    intensity: String
   })
 );
 
