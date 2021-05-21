@@ -1,10 +1,9 @@
 const express = require("express");
-const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const shortid = require("shortid");
 
 const app = express();
-app.use(bodyParser.json());
+app.use(express.json());
 
 mongoose.connect("mongodb://localhost/brewed-drinks-info-db", {
   useNewUrlParser: true,

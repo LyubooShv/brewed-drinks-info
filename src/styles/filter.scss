@@ -1,0 +1,63 @@
+@import "./custom.scss";
+@import "./mixins.scss";
+
+.filter-name{
+    margin-top: 5px;
+    @include flex(flex,center,none,none);
+    @include text($textColor,$font,15px)
+  }
+  .drI{
+    margin-top: 5px;
+    @include flex(flex,center,none,none);
+    @include text($textColor,$font,15px)
+  }
+  .drI:hover{
+      background-color: rgb(104, 197, 197);
+      color: azure;
+  }
+  .drDown{
+    background-color: rgba(56, 56, 56, 0.699);
+    border-radius: 12%;
+    border: none;
+    box-shadow: $shadow;
+    @include text($filterText,$font,15px)
+  }
+.drDown:hover{
+    opacity: 0.8;
+}
+.input{
+    border-radius: 8%;
+    border: none;
+   background-color:  rgba(56, 56, 56, 0.699);
+   box-shadow: $shadow;
+   @include text($filterText,$font,15px)
+}
+.input:focus{
+  outline: none;
+}
+.filter{
+  padding-left:0 ;
+  @include flex(flex,space-around,none,wrap)
+}
+.filter-input{
+  padding-top:20px ;
+  @include flex(flex,none,none,wrap)
+}
+.drHeader{
+  font-family: "Kalam", cursive;
+  
+}
+.filter-bar{
+  padding-right: 5px;
+  margin-top: 10px;
+  @include flex(flex,none,none,wrap)
+}
+.filter-sort{
+  padding-left: 35%;
+  padding-top: 2%;
+  @include flex(flex,none,column,none)
+}
+.filter-intensity{ 
+  @include flex(flex,none,column,none);
+  padding-top: 2%;
+}

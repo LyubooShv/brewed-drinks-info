@@ -20,6 +20,7 @@ class App extends React.Component {
       <Provider store={store}>
         <Router>
           <div className="grid-container">
+            
             <main>
               <Switch>
                 <Route path="/" exact component={Home}></Route>
@@ -35,7 +36,7 @@ class App extends React.Component {
                 <TiSocialGooglePlusCircular className="mediaImg" />
                 <TiLocationOutline className="mediaImg" />
               </div>
-              <div className="copyRight">Copyright © LybooShv 2021 </div>
+              <footer className="copyRight">Copyright © LybooShv 2021 </footer>
             </footer>
           </div>
         </Router>

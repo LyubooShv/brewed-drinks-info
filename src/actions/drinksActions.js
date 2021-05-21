@@ -13,19 +13,19 @@ export const fetchDrinks = () => async (dispatch) => {
       payload: {
         intensity: intensity,
         items:
-          intensity === ""
+          intensity === "ALL"
             ? drinks
-            : drinks.filter((x) => x.intensity === intensity),
+            : drinks.filter((x) => x.intensity.toUpperCase() === intensity.toUpperCase()),
       },
     });
   };
     export const sortDrinks = (filteredDrinks, sort) => (dispatch) => {
     const sortedDrinks = filteredDrinks.slice();
-    if (sort === "") {
+    if (sort === "ALL") {
       sortedDrinks.sort((a, b) => (a._id > b._id ? 1 : -1));
     } else {
       sortedDrinks.sort((a, b) =>
-        sort === "lowest"
+        sort === "Lowest"
           ? a.caffeine > b.caffeine
             ? 1
             : -1
