@@ -1,0 +1,12 @@
+@mixin flex($display,$content,$diraction,$wrap){
+    display: $display;
+    justify-content: $content;
+    flex-direction: $diraction;
+    flex-wrap: $wrap;
+}
+
+@mixin text($color,$family,$size,){
+    color:$color;
+    font-family: $family;
+    font-size: $size;
+}

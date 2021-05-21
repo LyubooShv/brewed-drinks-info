@@ -1,31 +1,31 @@
+@import "./custom.scss";
+@import "./mixins.scss";
 
 .navHeader{
- padding-right:600px;
- display: flex;
-  justify-content: center;
-  font-family: "Kalam", cursive;
-  font-size: 40px;
-  color: rgb(22, 22, 22);
+ padding-left: 8%;
+  @include flex(flex,center,none,none);
+  @include text($textColor,$font,40px)
 }
 .nav{
-display: flex;
-justify-content: space-between;
 padding-top: 2%;
+@include flex(flex,space-between,none,wrap)
 }
 .iconHome{
-    font-size: 33px;
     margin-top: 20px; 
     border: rgb(41, 40, 40) double;
     border-radius: 50%;
     border-width: 5px;
     margin-right: 8px;
-    background-color: rgb(71, 68, 68);
-    color: greenyellow;
+    background-color: rgb(54, 53, 53);
+    @include text(rgb(154, 231, 39),none,33px)
 }
-.navUl{
-    display: flex;
-    justify-content: space-around;
+.nav-line{
+    @include flex(flex,space-around,none,none);
 }
 .iconHome:hover{
-    opacity: 0.4;
+    background-color: rgba(70, 70, 70, 0.699);
+    color: rgb(184, 233, 110);
+}
+.tooltip strong{
+    @include text(none,$font,12px)
 }

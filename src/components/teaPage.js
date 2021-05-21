@@ -1,12 +1,10 @@
 import React, { Component } from "react";
 import Nav from "./Nav";
 import Fade from "react-reveal/Fade";
-import Zoom from "react-reveal/Zoom";
-import Button from "react-bootstrap/Button";
-import Modal from "react-bootstrap/Modal";
 import { connect } from "react-redux";
 import { fetchDrinks } from "../actions/drinksActions";
 import { addToLiked } from "../actions/likeActions";
+import Modall from "./Modal";
 class TeaPage extends Component {
   constructor(props) {
     super(props);
@@ -24,12 +22,11 @@ class TeaPage extends Component {
     this.setState({ item: null });
   };
   render() {
-    const { item } = this.state;
     return (
-      <div>
+      <div className="cT">
         <Nav />
-        <div className="drinks">
-          <Fade right cascade>
+        <div className="drinkss">
+          <Fade left cascade>
             {!this.props.drinks ? (
               <div>Loading...</div>
             ) : (
@@ -51,49 +48,11 @@ class TeaPage extends Component {
               </ul>
             )}
           </Fade>
-          {item && (
-            <Modal show={true} onRequestClose={this.closeModal}>
-              <Zoom>
-                <Modal.Header>
-                  <Modal.Title>{item.name}</Modal.Title>
-                </Modal.Header>
-                <Modal.Body>
-                  <div>
-                    <img
-                      src={item.img}
-                      alt={item.img}
-                      className="drinksImg"
-                    ></img>
-                  </div>
-                  <div>{item.info}</div>
-                  <div>
-                    <ul>
-                      <li>Size: {item.size}</li>
-                      <li>Caffeine: {item.caffeine}mg</li>
-                      <li>Calories: {item.calories}kcal</li>
-                    </ul>
-                  </div>
-                </Modal.Body>
-                <Modal.Footer>
-                  <Button
-                    variant="secondary"
-                    onClick={() => this.closeModal(item)}
-                  >
-                    Close
-                  </Button>
-                  <Button
-                    variant="primary"
-                    onClick={() => {
-                      this.props.addToLiked(item);
-                      this.closeModal(item);
-                    }}
-                  >
-                    Like
-                  </Button>
-                </Modal.Footer>
-              </Zoom>
-            </Modal>
-          )}
+          <Modall
+            item={this.state.item}
+            closeModal={this.closeModal}
+            addToLiked={this.props.addToLiked}
+          />
         </div>
       </div>
     );
