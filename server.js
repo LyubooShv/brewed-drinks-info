@@ -6,12 +6,14 @@ const app = express();
 app.use(express.json());
 
 const CONNECTION_URL = 'mongodb+srv://LyuboShv:Poortsmouth1@cluster0.jg4jz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
-
-mongoose.connect(CONNECTION_URL || "mongodb://localhost/brewed-drinks-info-db", {
+const PORT = process.env.PORT || 5000
+mongoose.connect(CONNECTION_URL , {
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true,
-});
+})
+.then(()=>app.listen(PORT,()=>console.log(`Server running on port: ${PORT}`)))
+.carch((error)=>console.log(error.massage));
 
 const Drink = mongoose.model(
   "drinks",
