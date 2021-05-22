@@ -6,9 +6,9 @@ const app = express();
 app.use(express.json());
 
 // const MONGODB_URL = 'mongodb+srv://LyuboShv:Poortsmouth1@cluster0.jg4jz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
-app.use("/", express.static(__dirname + "/build"));
-app.get("/", (req, res) => res.sendFile(__dirname + "/build/index.html"));
-mongoose.connect( 'mongodb+srv://LyuboShv:Poortsmouth1@cluster0.jg4jz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority' || "mongodb://localhost/brewed-drinks-info-db", {
+app.use("/api/drinks", express.static(__dirname + "/build"));
+app.get("/api/drinks", (req, res) => res.sendFile(__dirname + "/build/index.html"));
+mongoose.connect( process.env.MONGODB_URL || "mongodb://localhost/brewed-drinks-info-db", {
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true,
