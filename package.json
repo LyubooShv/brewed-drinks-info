@@ -1,6 +1,6 @@
 {
   "name": "brewed-drinks-info",
-  
+  "proxy":"https://project-name.glitch.me",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
