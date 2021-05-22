@@ -7,7 +7,7 @@ app.use(express.json());
 
 const CONNECTION_URL = 'mongodb+srv://LyuboShv:Poortsmouth1@cluster0.jg4jz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 
-mongoose.connect(process.env.MONGODB_URL || CONNECTION_URL, {
+mongoose.connect(CONNECTION_URL || "mongodb://localhost/brewed-drinks-info-db", {
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true,
