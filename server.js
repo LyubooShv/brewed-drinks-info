@@ -5,7 +5,9 @@ const shortid = require("shortid");
 const app = express();
 app.use(express.json());
 
-mongoose.connect("mongodb://localhost/brewed-drinks-info-db", {
+const CONNECTION_URL = 'mongodb+srv://LyuboShv:Poortsmouth1@cluster0.jg4jz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+
+mongoose.connect(process.env.MONGODB_URL || CONNECTION_URL, {
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true,
