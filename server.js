@@ -4,14 +4,10 @@ const shortid = require("shortid");
 
 const app = express();
 app.use(express.json());
-const router = express.Router()
+
 const MONGODB_URL = 'mongodb+srv://LyuboShv:Poortsmouth1@cluster0.jg4jz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
-app.use("/", express.static(__dirname + "/build"));
-// app.use("/coffee", express.static(__dirname + "/build"));
-// app.use("/tea", express.static(__dirname + "/build"));
-app.get("/", (req, res) => res.sendFile(__dirname + "/build/index.html"));
-// router.get("/coffee", (req, res) => res.sendFile(__dirname + "/build/index.html"));
-// router.get("/tea", (req, res) => res.sendFile(__dirname + "/build/index.html"));
+app.use("/", express.static("/api/drinks/build"));
+app.get("/", (req, res) => res.sendFile("/api/drinks/build/index.html"));
 mongoose.connect( process.env.MONGODB_URL || MONGODB_URL, {
   useNewUrlParser: true,
   useCreateIndex: true,
