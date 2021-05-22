@@ -6,13 +6,13 @@ const app = express();
 app.use(express.json());
 
 const MONGODB_URL = 'mongodb+srv://LyuboShv:Poortsmouth1@cluster0.jg4jz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
-app.use("/", express.static("/api/drinks/build"));
-app.get("/", (req, res) => res.sendFile("/api/drinks/build/index.html"));
-mongoose.connect( process.env.MONGODB_URL || MONGODB_URL, {
+app.use("/", express.static(__dirname + "/build"));
+app.get("/", (req, res) => res.sendFile(__dirname + "/build/index.html"));
+mongoose.connect(MONGODB_URL, {
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true,
-})
+});
 
 
 const Drink = mongoose.model(
