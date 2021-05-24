@@ -5,11 +5,12 @@ const shortid = require("shortid");
 const app = express();
 app.use(express.json());
 
-const MONGODB_URL = 'mongodb+srv://LyuboShv:Poortsmouth1@cluster0.jg4jz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 app.use("/", express.static(__dirname + "/build"));
+app.get("/", (req, res) => res.sendFile(__dirname + "/build/index.html"));
 
+// const MONGODB_URL = 'mongodb+srv://LyuboShv:LyuboShv123@cluster0.jg4jz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 
-mongoose.connect(MONGODB_URL , {
+mongoose.connect(process.env.MONGODB_URL || "mongodb://localhost/brewed-drinks-info-db" , {
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true,
@@ -47,5 +48,5 @@ app.delete("/api/drinks/:id", async (req, res) => {
   res.send(deletedDrink);
 });
 
-// const port = process.env.PORT || 5000;
-// app.listen(port, () => console.log("serve at http://localhost:5000"));
+const port = process.env.PORT || 5000;
+app.listen(port, () => console.log("serve at http://localhost:5000"));
