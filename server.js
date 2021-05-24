@@ -7,7 +7,9 @@ app.use(express.json());
 
 const MONGODB_URL = 'mongodb+srv://LyuboShv:Poortsmouth1@cluster0.jg4jz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 app.use("/", express.static(__dirname + "/build"));
-app.get("/", (req, res) => res.sendFile(__dirname + "/build/index.html"));
+app.get("/coffee", (req, res) => res.sendFile(__dirname + "/build/index.html"));
+app.get("/tea", (req, res) => res.sendFile(__dirname + "/build/index.html"));
+
 mongoose.connect(process.env.MONGODB_URL || MONGODB_URL , {
   useNewUrlParser: true,
   useCreateIndex: true,
