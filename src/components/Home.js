@@ -10,7 +10,7 @@ export default class Home extends Component {
         <header>Brewed Drinks Info</header>
         <Fade top cascade>
           <div className="homeImg">
-            <Link to="/api/drinks" className="path">
+            <Link to="/coffee" className="path">
               <div className="pCaffee">
                 <img src={caffee} alt="caffee" className="caffeeImg" />
                 <p>Coffee</p>

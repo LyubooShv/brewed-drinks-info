@@ -1,5 +1,5 @@
 export const fetchDrinks = () => async (dispatch) => {
-    const res = await fetch("/api/drinks");
+    const res = await fetch('mongodb+srv://LyuboShv:Poortsmouth1@cluster0.jg4jz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority');
     const data = await res.json();
     console.log(data);
     dispatch({
