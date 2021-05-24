@@ -7,8 +7,14 @@ app.use(express.json());
 
 const MONGODB_URL = 'mongodb+srv://LyuboShv:Poortsmouth1@cluster0.jg4jz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 app.use("/", express.static(__dirname + "/build"));
-app.get("/coffee", (req, res) => res.sendFile(__dirname + "/build/index.html"));
-app.get("/tea", (req, res) => res.sendFile(__dirname + "/build/index.html"));
+app.get("/coffee", async (req, res) => {
+  const drinks = await Drink.find({});
+  res.send(drinks);
+});
+app.get("/tea",  async (req, res) => {
+  const drinks = await Drink.find({});
+  res.send(drinks);
+});
 
 mongoose.connect(process.env.MONGODB_URL || MONGODB_URL , {
   useNewUrlParser: true,
