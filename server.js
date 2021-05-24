@@ -9,7 +9,7 @@ const MONGODB_URL = 'mongodb+srv://LyuboShv:Poortsmouth1@cluster0.jg4jz.mongodb.
 app.use("/", express.static(__dirname + "/build"));
 
 
-mongoose.connect(process.env.MONGODB_URL || MONGODB_URL , {
+mongoose.connect(MONGODB_URL , {
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true,
