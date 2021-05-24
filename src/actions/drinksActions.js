@@ -1,5 +1,5 @@
 export const fetchDrinks = () => async (dispatch) => {
-    const res = await fetch("/api/tea");
+    const res = await fetch("/api/drinks");
     const data = await res.json();
     console.log(data);
     dispatch({

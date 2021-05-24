@@ -31,11 +31,7 @@ const Drink = mongoose.model(
   })
 );
 
-app.get("/api/coffee", async (req, res) => {
-  const drinks = await Drink.find({});
-  res.send(drinks);
-});
-app.get("/api/tea", async (req, res) => {
+app.get("/api/drinks", async (req, res) => {
   const drinks = await Drink.find({});
   res.send(drinks);
 });
