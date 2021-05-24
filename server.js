@@ -8,7 +8,7 @@ app.use(express.json());
 app.use("/", express.static(__dirname + "/build"));
 app.get("/", (req, res) => res.sendFile(__dirname + "/build/index.html"));
 
-const MONGODB_URL = 'mongodb+srv://LyuboShv:LyuboShv123@cluster0.jg4jz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+const MONGODB_URL = 'mongodb+srv://LyuboShv:LyuboShv123@cluster0.jg4jz.mongodb.net/brewed-drinks-info?retryWrites=true&w=majority'
 
 mongoose.connect(MONGODB_URL  , {
   useNewUrlParser: true,
