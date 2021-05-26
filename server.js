@@ -1,14 +1,18 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const shortid = require("shortid");
-const router = express.Router()
+
 const app = express();
 app.use(express.json());
 
 app.use("/", express.static(__dirname + "/build"));
 app.get("/", (req, res) => res.sendFile(__dirname + "/build/index.html"));
 
+app.use("/coffee", express.static(__dirname + "/build"));
+app.get("/coffee", (req, res) => res.sendFile(__dirname + "/build/index.html"));
 
+app.use("/tea", express.static(__dirname + "/build"));
+app.get("/tea", (req, res) => res.sendFile(__dirname + "/build/index.html"));
 
 mongoose.connect(process.env.MONGODB_URL || "mongodb://localhost/brewed-drinks-info-db", {
   useNewUrlParser: true,
@@ -31,15 +35,6 @@ const Drink = mongoose.model(
     intensity: String
   })
 );
-
-router.get("/coffee",async (req, res) => {
-  const drinks = await Drink.find({});
-  res.send(drinks);
-})
-router.get("/tea",async (req, res) => {
-  const drinks = await Drink.find({});
-  res.send(drinks);
-})
 
 app.get("/api/drinks", async (req, res) => {
   const drinks = await Drink.find({});
