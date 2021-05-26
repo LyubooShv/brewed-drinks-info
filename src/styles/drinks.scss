@@ -26,7 +26,7 @@
 }
 .drinksLi{
     list-style-type: none;
-    padding: 2% 5% 0 4%;
+    padding: 2% 5% 24px 4%;
     @include flex(flex,space-between,column,wrap)
 }
 .drinksImg:hover{
@@ -86,4 +86,10 @@ opacity: $opacity;
 }
 .cP,.cT{
     margin-right: 20px;
+}
+.drinksLii{
+    list-style-type: none;
+    padding: 2% 5% 24px 4%;
+    @include flex(flex,space-between,column,wrap);
+    margin-bottom: 253px;
 }

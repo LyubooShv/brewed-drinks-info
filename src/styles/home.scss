@@ -9,27 +9,22 @@ body,
   height: 100vh;
   margin: 0;
 }
-.grid-container {
-  display: grid;
-  grid-template-areas:
-    "header"
-    "main"
-    "footer";
-  grid-template-rows: 5rem 1fr 7rem;
-  grid-template-columns: 1fr;
-  height: 100%;
-}
+// .grid-container {
+//   display: grid;
+//   grid-template-areas:
+//     "header"
+//     "main"
+//     "footer";
+//   grid-template-rows: 5rem 1fr 7rem;
+//   grid-template-columns: 1fr;
+//   height: 100%;
+// }
 .homeImg {
   padding: 35px 26% 5% 26%;
   margin-bottom: 18.3px;
   @include flex(flex,space-around,none,wrap)
 }
-.caffeeImg {
-  width: 300px;
-  height: 429px;
-  border-radius: 8px;
-}
-.teaImg {
+.caffeeImg,.teaImg {
   width: 300px;
   height: 429px;
   border-radius: 8px;

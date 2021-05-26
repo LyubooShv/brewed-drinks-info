@@ -34,7 +34,7 @@ class TeaPage extends Component {
                 {this.props.drinks.map(
                   (item) =>
                     item.drink === "tea" && (
-                      <li key={item._id} className="drinksLi">
+                      <li key={item._id} className={this.props.drinks.length >6 ? "drinksLi" : "drinksLii"}>
                         <img
                           src={item.img}
                           alt={item.name}
